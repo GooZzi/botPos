@@ -1,0 +1,25 @@
+name: Send Telegram Message
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Send Telegram message
+      run: php getMessage.php
