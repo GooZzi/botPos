@@ -1,7 +1,7 @@
 <?php
 
 function send_message($chat_id, $text) {
-    $url = "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage";
+    $url = "https://api.telegram.org/bot<6365069296:AAFIUYKuOr1OPg3datUM6prHNUD6u03V2sg>/sendMessage";
     $params = array(
         "chat_id" => $chat_id,
         "text" => $text
@@ -18,11 +18,11 @@ function send_message($chat_id, $text) {
 
 // Пример использования
 $chat_ids = array(
-    "<GROUP_1_CHAT_ID>",
-    "<GROUP_2_CHAT_ID>",
-    "<GROUP_3_CHAT_ID>"
+    "<162956445>",
+    "<-1001980493060>",
+    "<6365069296>"
 );
-$text = "Привет, мир!";
+$text = "Привет, епта!";
 
 foreach ($chat_ids as $chat_id) {
     $response = send_message($chat_id, $text);
